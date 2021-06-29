@@ -5,25 +5,34 @@ Olimpia Milano - Cantù | 55-60 -->
 <?php 
     $partite = [
         [
-           "Virtus Bologna" => "48",
-            "Varese" => "56",
+            Casa => "Virtus Bologna",
+            Ospite => "Varese",
+            PuntiCasa => 48,
+            PuntiOspite => 56
         ],
         [
-            "Virtus Roma" => "60",
-            "Treviso" => "55",
+            Casa => "Virtus Roma",
+            Ospite => "Treviso",
+            PuntiCasa => 60,
+            PuntiOspite => 55
         ],
         [
-            "S. C. Gira" => "58",
-            "Trieste" => "40",
+            Casa => "S. C. Gira",
+            Ospite => "Trieste",
+            PuntiCasa => 58,
+            PuntiOspite => 40
         ],
         [
-            "Petrarca" => "64",
-            "Partenope" => "75",
+            Casa => "Petrarca",
+            Ospite => "Partenope",
+            PuntiCasa => 64,
+            PuntiOspite => 75
         ],
         [
-            "Ginnastica Roma" => "74",
-            "Pallacanestro Udine" => "70",
-
+            Casa => "Ginnastica Roma",
+            Ospite => "Pallacanestro Udine",
+            PuntiCasa => 74,
+            PuntiOspite => 70
         ],
     ];
 ; ?>
@@ -40,9 +49,10 @@ Olimpia Milano - Cantù | 55-60 -->
     <body>
         <h1>Risultati della quarta giornata di campionato</h1>
         <p><?php  
-            echo "<pre>";
-            print_r($partite);
-            echo "</pre>";
+            for ($i=0; $i < count($partite); $i++) { 
+            $campionato = $partite[$i];
+             echo "<li>" . $campionato["Casa"]. " - " . $campionato["Ospite"] . " || " . $campionato["PuntiCasa"] . " - " . $campionato["PuntiOspite"] . "</li>"; 
+            };
         ; ?>
         </p>
     </body>
